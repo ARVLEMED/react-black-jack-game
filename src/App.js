@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import React from "react";
 import Introduction from "./components/Intro";
@@ -7,7 +6,7 @@ import Techniques from "./components/Techniques";
 import Tips from "./components/Tips";
 import Strategy from "./components/Strategy";
 import './style.css';
-
+import BlackjackGame from './BlackjackGame';
 
 function App() {
   return (
@@ -18,6 +17,7 @@ function App() {
       <Tips />
     
       <Strategy />
+      <BlackjackGame />
     </div>
   );
 }
