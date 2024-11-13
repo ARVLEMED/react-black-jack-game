@@ -1,0 +1,312 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Tutorial Container */
+.tutorial-container {
+  width: 80%;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* Background container */
+#background-container {
+  background-color: #05472a;
+  color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+#background-container h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#game-introduction {
+  font-size: 1.2rem;
+}
+
+#game-introduction h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+#game-introduction h3 {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+#game-introduction ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+#game-introduction li {
+  margin: 5px 0;
+}
+
+/* Rules Section */
+#game-rules {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+#game-rules h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+#game-rules p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Techniques Section */
+#game-techniques {
+  background-color: #e7f7f7;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+#game-techniques h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+#game-techniques h3 {
+  font-size: 1.5rem;
+  margin-top: 15px;
+}
+
+#game-techniques p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Tips Section */
+#game-tips {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+#game-tips h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+#game-tips ol {
+  padding-left: 20px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+#game-tips li {
+  margin: 10px 0;
+}
+
+#game-tips h3 {
+  font-size: 1.4rem;
+  margin-top: 15px;
+}
+
+#game-tips img {
+  max-width: 100%;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+/* Strategy Section */
+#game-strategy {
+  background-color: #eef4f9;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+#game-strategy h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+#game-strategy p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+#game-strategy article {
+  margin-bottom: 20px;
+}
+
+#game-strategy .video-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+#game-strategy iframe {
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Game Board styles */
+.game-board {
+  font-family: "Arial", sans-serif;
+  text-align: center;
+  padding: 20px;
+  background: url("./Assets/casino_blackjack_background_image.jpg") no-repeat
+    center center fixed;
+  background-size: cover;
+  color: white;
+  min-height: 50vh;
+}
+
+button {
+  background-color: #ff4500; /* Orange-Red */
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border: 2px solid #ff6347; /* Tomato */
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin: 10px;
+}
+
+button:hover {
+  background-color: #ff6347; /* Tomato */
+  transform: scale(1.1);
+}
+
+button:active {
+  background-color: #ff4500; /* Orange-Red */
+  transform: scale(1);
+}
+
+button:disabled {
+  background-color: #808080; /* Gray for disabled */
+  cursor: not-allowed;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.card-container img {
+  width: 75px;
+  height: 100px;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#startGameButton {
+  background-color: #32cd32; /* Lime Green */
+}
+
+#hitButton {
+  background-color: #4682b4; /* Steel Blue */
+}
+
+#standButton {
+  background-color: #8b0000; /* Dark Red */
+}
+
+#hitButton:hover,
+#standButton:hover {
+  background-color: #5f9ea0; /* Light Slate Gray */
+}
+
+/* Animation for the game state */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.game-state {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.dealer-hand,
+.player-hand {
+  margin-bottom: 20px;
+}
+
+h4 {
+  color: #ffd700; /* Gold */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .tutorial-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  #background-container h1 {
+    font-size: 2.5rem;
+  }
+
+  #game-introduction h2 {
+    font-size: 1.8rem;
+  }
+
+  #game-rules h2,
+  #game-techniques h2,
+  #game-tips h2,
+  #game-strategy h2 {
+    font-size: 1.8rem;
+  }
+
+  #game-introduction h3,
+  #game-techniques h3 {
+    font-size: 1.4rem;
+  }
+
+  #game-tips ol {
+    font-size: 1rem;
+  }
+
+  #game-tips img {
+    width: 100%;
+  }
+
+  #game-strategy iframe {
+    width: 100%;
+    height: auto;
+  }
+
+  .game-board {
+    padding: 15px;
+  }
+
+  .card-container img {
+    width: 60px;
+    height: 85px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
