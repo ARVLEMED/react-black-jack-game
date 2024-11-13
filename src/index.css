@@ -1,37 +1,21 @@
 /* src/App.css */
-.App {
-  font-family: 'Arial', sans-serif;
+.game-board {
+  font-family: "Arial", sans-serif;
   text-align: center;
   padding: 20px;
-  background: url('./Assets/casino_blackjack_background_image.jpg') no-repeat center center fixed;
+  background: url("./Assets/casino_blackjack_background_image.jpg") no-repeat
+    center center fixed;
   background-size: cover;
   color: white;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 2.5rem;
-  color: #FFD700; /* Gold */
-  margin-bottom: 40px;
-}
-
-h2, h3 {
-  font-size: 1.5rem;
-  margin-top: 20px;
-  color: #FFF;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-}
-
-div {
-  margin-bottom: 20px;
+  min-height: 50vh;
 }
 
 button {
-  background-color: #FF4500; /* Orange-Red */
+  background-color: #ff4500; /* Orange-Red */
   color: white;
   padding: 15px 30px;
   font-size: 1.2rem;
-  border: 2px solid #FF6347; /* Tomato */
+  border: 2px solid #ff6347; /* Tomato */
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
@@ -39,12 +23,12 @@ button {
 }
 
 button:hover {
-  background-color: #FF6347; /* Tomato */
+  background-color: #ff6347; /* Tomato */
   transform: scale(1.1);
 }
 
 button:active {
-  background-color: #FF4500; /* Orange-Red */
+  background-color: #ff4500; /* Orange-Red */
   transform: scale(1);
 }
 
@@ -68,19 +52,20 @@ button:disabled {
 }
 
 #startGameButton {
-  background-color: #32CD32; /* Lime Green */
+  background-color: #32cd32; /* Lime Green */
 }
 
 #hitButton {
-  background-color: #4682B4; /* Steel Blue */
+  background-color: #4682b4; /* Steel Blue */
 }
 
 #standButton {
-  background-color: #8B0000; /* Dark Red */
+  background-color: #8b0000; /* Dark Red */
 }
 
-#hitButton:hover, #standButton:hover {
-  background-color: #5F9EA0; /* Light Slate Gray */
+#hitButton:hover,
+#standButton:hover {
+  background-color: #5f9ea0; /* Light Slate Gray */
 }
 
 /* Animation for the game state */
@@ -102,6 +87,6 @@ button:disabled {
   margin-bottom: 20px;
 }
 
-h3 {
-  color: #FFD700; /* Gold */
+h4 {
+  color: #ffd700; /* Gold */
 }
