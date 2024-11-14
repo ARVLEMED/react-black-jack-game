@@ -1,70 +1,185 @@
-# Getting Started with Create React App
+# Blackjack Game in React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the **Blackjack Game**! This project allows you to play the popular card game, Blackjack, in a browser using React. The game simulates the dealer's play and includes a simple tutorial on how to play. The game logic includes deck creation, shuffling, hand value calculation, and automatic gameplay.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+1. [Project Overview](#project-overview)
+2. [Getting Started](#getting-started)
+3. [Features](#features)
+4. [Game Flow](#game-flow)
+5. [File Structure](#file-structure)
+6. [Code Explanation](#code-explanation)
+7. [Technologies Used](#technologies-used)
+8. [Contributing](#contributing)
+9. [License](#license)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Project Overview
 
-### `npm test`
+This project is a Blackjack card game developed with React. The game includes:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Automatic Game Start**: After a 2-second delay, the game automatically begins with the deck shuffled, and two cards dealt to both the player and the dealer.
+- **Player Actions**: The player can choose to "hit" (draw a card) or "stand" (end their turn).
+- **Dealer Behavior**: The dealer automatically plays by drawing cards until their hand value reaches 17 or higher.
+- **Hand Scoring**: The game calculates hand values, considering face cards (J, Q, K) as 10 points, Aces as either 1 or 11 points, and numeric cards as their face value.
+- **Game Outcome**: The game determines whether the player or the dealer wins, or if there's a tie.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To run this project locally, ensure you have the following installed:
 
-### `npm run eject`
+- **Node.js** (preferably the latest stable version)
+- **npm** (Node Package Manager)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Installation Steps
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone the repository to your local machine:
+   ```bash
+   git clone https://github.com/your-username/blackjack-react-game.git
+   cd blackjack-react-game
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Install the required dependencies:
+   ```bash
+   npm install
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. Start the development server:
+   ```bash
+   npm start
+   ```
 
-## Learn More
+4. Open your browser and go to `http://localhost:3000` to play the game!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Features
 
-### Code Splitting
+- **Game Tutorial**: Explains the rules and strategies for playing Blackjack.
+- **Automatic Gameplay**: Simulates the player's actions until the game is finished.
+- **Game Reset**: After each game, the game automatically resets after a 3-second delay.
+- **Card Graphics**: Dynamically loads images for cards in the player's and dealer's hands.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## Game Flow
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. **Game Initialization**:
+   - A shuffled deck is created, and two cards are dealt to both the player and the dealer.
+   - The game state changes to "inProgress."
 
-### Making a Progressive Web App
+2. **Player Actions**:
+   - The player can choose to "hit" (draw a card) or "stand" (end the turn).
+   - Each "hit" updates the player's score.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+3. **Dealer Actions**:
+   - The dealer automatically "stands" when their hand value reaches 17 or higher.
+   - The dealer draws cards until reaching 17.
 
-### Advanced Configuration
+4. **Game Outcome**:
+   - The game determines the winner based on the hand values of the player and the dealer.
+   - If either player or dealer busts (goes over 21), the other wins.
+   - The game state is then set to "finished," and a winner is displayed.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## File Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```
+/blackjack-react-game
+├── /src
+│   ├── /components
+│   │   ├── BlackjackGame.js           # Main game logic and UI
+│   │   ├── Word.js                    # Tutorial explaining game rules
+│   │   └── style.css                  # Global styles
+│   ├── App.js                         # Main entry point of the app
+│   ├── /Assets                        # Folder containing card images
+│   │   └── <card_image_files>.png     # Card images for each suit
+│   ├── Deck.js                        # Logic for creating, shuffling, and calculating card values
+│   └── index.js                       # Main render entry point
+└── package.json                       # Project dependencies and scripts
+```
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Code Explanation
+
+### `BlackjackGame.js`
+
+This is the main file where the game's logic and UI are implemented.
+
+- **State Variables**:
+  - `deck`: The shuffled deck of cards.
+  - `playerHand`, `dealerHand`: Arrays storing the cards dealt to the player and dealer, respectively.
+  - `playerScore`, `dealerScore`: Current hand values for the player and dealer.
+  - `gameState`: Tracks the current state of the game (waiting, inProgress, finished).
+
+- **Functions**:
+  - `startGame()`: Initializes the game by creating and shuffling a deck, and dealing cards to the player and dealer.
+  - `hit()`: Draws a card for the player and updates their score.
+  - `stand()`: Executes the dealer's automatic gameplay and ends the game.
+
+- **Card Image Rendering**: The `cardImagePath()` function dynamically generates paths for each card's image based on its value and suit.
+
+### `Deck.js`
+
+Contains functions for creating the deck, shuffling it, calculating hand values, and getting card values.
+
+- `createDeck()`: Generates a new deck of 52 cards.
+- `shuffleDeck()`: Shuffles the deck using the Fisher-Yates algorithm.
+- `calculateHandValue()`: Calculates the total hand value, adjusting for Aces (which can be worth 1 or 11).
+- `getCardValue()`: Returns the value of a card based on its face value.
+
+### `Word.js`
+
+Contains the tutorial sections explaining the rules, tips, techniques, and strategy for playing Blackjack.
+
+- `Introduction()`: Describes the game and card values.
+- `Rules()`: Explains the basic rules of Blackjack.
+- `Tips()`: Provides useful tips and when to "hit," "stand," or "split."
+- `Techniques()`: Details advanced gameplay techniques like "double down" and "surrender."
+- `Strategy()`: Discusses optimal strategies for playing Blackjack.
+
+### `App.js`
+
+The main entry point of the app, which renders both the `BlackjackTutorial` and `BlackjackGame` components.
+
+---
+
+## Technologies Used
+
+- **React**: JavaScript library for building the user interface.
+- **JavaScript ES6+**: For modern JavaScript syntax and features.
+- **CSS**: For styling the game and tutorial interface.
+- **Node.js**: Server-side JavaScript runtime (for development server).
+- **npm**: Node Package Manager for handling dependencies.
+
+---
+
+## Contributing
+
+We welcome contributions to this project! To contribute:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Make your changes and commit them (`git commit -am 'Add new feature'`).
+4. Push to the branch (`git push origin feature-branch`).
+5. Open a pull request.
+
+---
+
+## License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
+---
+
+### Enjoy playing Blackjack and good luck!
