@@ -65,6 +65,9 @@ body {
   padding: 20px;
   border-radius: 8px;
   margin-bottom: 20px;
+  color: aliceblue;
+  background:url("./Assets/pexels-rkftr-4253888.jpg") no-repeat
+  center center fixed;;
   
 }
 
@@ -84,6 +87,9 @@ body {
   padding: 20px;
   border-radius: 8px;
   margin-bottom: 20px;
+  color: aliceblue;
+  background:url("./Assets/pexels-rkftr-4253620.jpg") no-repeat
+  center center fixed;;;
 }
 
 #game-techniques h2 {
@@ -107,6 +113,9 @@ body {
   padding: 20px;
   border-radius: 8px;
   margin-bottom: 20px;
+  color:aqua;
+  background:url("./Assets/pexels-elian-emanuel-coutinho-roehrs-204760327-18341166.jpg") no-repeat
+  center center fixed;;
  
 }
 
@@ -141,6 +150,9 @@ body {
   background-color: #eef4f9;
   padding: 20px;
   border-radius: 8px;
+  color:aliceblue;
+  background:url("./Assets/pexels-shvetsa-6664126.jpg") no-repeat
+  center center fixed;;;
 }
 
 #game-strategy h2 {
