@@ -6,6 +6,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #05472a;
+  font-size:x-large;
 }
 
 /* Tutorial Container */
@@ -110,11 +111,12 @@ body {
 /* Tips Section */
 #game-tips {
   background-color: #f9f9f9;
+  text-align:justify;
   padding: 20px;
   border-radius: 8px;
   margin-bottom: 20px;
-  color:aqua;
-  background:url("./Assets/pexels-elian-emanuel-coutinho-roehrs-204760327-18341166.jpg") no-repeat
+  color:#f9f9f9;
+  background:url("./Assets/pexels-nick-rtr-1632308-3187173.jpg") no-repeat
   center center fixed;;
  
 }
@@ -185,11 +187,12 @@ body {
   font-family: "Arial", sans-serif;
   text-align: center;
   padding: 20px;
-  background: url("./Assets/casino_blackjack_background_image.jpg") no-repeat
+  background: url("./Assets/pexels-shvetsa-6664131.jpg") no-repeat
     center center fixed;
   background-size: cover;
   color: white;
   min-height: 50vh;
+  
 }
 
 button {
@@ -293,6 +296,7 @@ h4 {
   #game-tips h2,
   #game-strategy h2 {
     font-size: 1.8rem;
+    text-align: center;
   }
 
   #game-introduction h3,
