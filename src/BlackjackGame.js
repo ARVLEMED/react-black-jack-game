@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { createDeck, shuffleDeck, calculateHandValue } from "./Deck";
-import "./index.css";
+
+
 
 const BlackjackGame = () => {
   const [deck, setDeck] = useState([]);

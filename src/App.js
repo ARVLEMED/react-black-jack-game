@@ -1,4 +1,4 @@
-import "./index.css";
+import "./style.css";
 import React from "react";
 import BlackjackTutorial from "./components/Word";
 import "./components/style.css";
